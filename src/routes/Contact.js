@@ -28,12 +28,14 @@ const Contact = () => {
             스프링 클라우드를 활용한 SW전문가 양성 교육 이수
             <br />
             kGITBANK (2020.04 ~ 09.17, 6개월)
+            <br />
+            JAVA, SpringMVC, JSP, Oracle 교육 이수
           </p>
           <hr />
           <p>
-            정보처리기사 2021.08
+            정보처리기사 2021.08 취득
             <br />
-            ADsP 2020.09
+            ADsP 2020.09 취득
           </p>
           <span>
             <FaChild />

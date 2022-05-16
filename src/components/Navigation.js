@@ -11,7 +11,7 @@ const Navigation = () => {
         <Link to="/">
           <li
             onClick={() => clickHere(1)}
-            className={userStayLi === 1 && "active"}
+            className={userStayLi === 1 ? "nav-li active" : "nav-li"}
           >
             <span>Introduce</span>
           </li>
@@ -19,7 +19,7 @@ const Navigation = () => {
         <Link to="/project">
           <li
             onClick={() => clickHere(2)}
-            className={userStayLi === 2 && "active"}
+            className={userStayLi === 2 ? "nav-li active" : "nav-li"}
           >
             <span>Project</span>
           </li>
@@ -27,7 +27,7 @@ const Navigation = () => {
         <Link to="/contact">
           <li
             onClick={() => clickHere(3)}
-            className={userStayLi === 3 && "active"}
+            className={userStayLi === 3 ? "nav-li active" : "nav-li"}
           >
             <span>Contact</span>
           </li>

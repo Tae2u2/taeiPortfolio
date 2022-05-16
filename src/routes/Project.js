@@ -46,7 +46,6 @@ const Project = () => {
         </section>
         <section>
           <img src={cuting} alt="cuting UI" />
-          <a href="https://github.com/Tae2u2/cuting_project"></a>
           <div>
             <h4 style={{ backgroundColor: "#558b2f" }}>Spring</h4>
             <h4 style={{ backgroundColor: "#1E88E5" }}>JSP</h4>
