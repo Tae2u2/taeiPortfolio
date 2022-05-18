@@ -17,9 +17,10 @@ $breakpoint-mobile: 335px
 $breakpoint-tablet: 758px
 $breakpoint-desktop: 1024px
 
-$black: #111010
+$point-color: #A0FCBA
 $white: #fff
-$pink: #f48fb1
+$black: #000
+$main-color: #8CF4E2
 //@include for-center-line
 *
     margin: 0px
@@ -27,9 +28,12 @@ $pink: #f48fb1
     box-sizing: border-box
 .app
     width: 100%
-    height: 100%
+    height: 100vh
     font-family: "Noto Sans KR", sans-serif
-
+    #plant
+        position: absolute
+        bottom: 10px
+        right: 0
 footer
     padding-top: 20px
     text-align: center
@@ -38,21 +42,20 @@ footer
 
 nav
     width: 100%
-    margin-top: 50px
+    margin-top: 15px
     ul
         display: flex
         justify-content: flex-start
-        margin-left: 30px
-
+        margin-left: 15px
         li
             list-style: none
             width: 180px
             padding: 15px 45px
             margin-right: 20px
-            color: $white
+            color: $black
             font-size: 1.2em
             letter-spacing: -0.7px
-            background-color: $black
+            background-color: $point-color
             border-top-left-radius: 5px
             transition: 0.4s
 
@@ -68,9 +71,9 @@ nav
             text-decoration: none
 
         li:hover
-            background-color: $pink
+            background-color: $main-color
         .active
-            background-color: $pink
+            background-color: $main-color
 
 @mixin mobile
     @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px})
@@ -88,8 +91,8 @@ nav
                 width: 95px
                 margin: 0
                 border-top-left-radius: 0px
-                border-right: 1px solid $pink
-                border-bottom: 1px solid $pink
+                border-right: 1px solid $main-color
+                border-bottom: 1px solid $main-color
                 padding: 30px 10px 4px 2px
             li::before
                 display: none
@@ -99,17 +102,18 @@ nav
         display: none
     .home-div
         flex-direction: column-reverse
+        border: 1px solid $main-color
         img
-            width: 100px
-            height: 160px
+            width: 70%
         span
             display: none
     .project-div
+        border: 1px solid $main-color
         section
             display: flex
             flex-direction: column
             img
-                width: 250px
+                width: 70%
             h4
                 width: 250px
                 margin-left: 0px
@@ -120,6 +124,7 @@ nav
 
     .contact-div
         flex-direction: column
+        border: 1px solid $main-color
         .id-card
             width: 330px
             height: 260px
@@ -133,13 +138,13 @@ nav
 
 @include tablet
     .container-div
-        width: 700px
+        width: 70%
     .container-div::after
         display: none
     .home-div
+        flex-direction: column-reverse
         img
-            width: 150px
-            height: 210px
+            width: 40%
         span
             display: none
     .project-div

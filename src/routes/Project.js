@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/routes-style.sass";
 import piggy from "../images/pigMain.jpg";
 import cuting from "../images/cutingHome.png";
 import { HiCursorClick } from "react-icons/hi";
+import Minibar from "components/Minibar";
+import Piggy from "components/Piggy";
 
 const Project = () => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div className="container-div">
       <div className="project-div">
         <section>
-          <a href="https://taeistory-piggy.herokuapp.com/">
-            <img src={piggy} alt="pig project" />
-          </a>
+          <a href="https://taeistory-piggy.herokuapp.com/"></a>
+          <img
+            src={piggy}
+            onClick={() => setOpenModal(true)}
+            alt="pig project"
+          />
           <div>
             <h4 style={{ backgroundColor: "#1E88E5" }}>React</h4>
             <h4 style={{ backgroundColor: "#558b2f" }}>nodeJS</h4>
@@ -44,6 +50,7 @@ const Project = () => {
             test PW : testpw1234
           </p>
         </section>
+        {openModal && <Piggy />}
         <section>
           <img src={cuting} alt="cuting UI" />
           <div>
@@ -72,6 +79,7 @@ const Project = () => {
             <HiCursorClick />
           </p>
         </section>
+        <Minibar />
       </div>
     </div>
   );

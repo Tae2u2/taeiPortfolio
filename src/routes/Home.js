@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/routes-style.sass";
-import taei from "../images/taei.jpg";
+import taei from "../images/mypicture.jpg";
 
 const Home = () => {
   return (
@@ -11,16 +11,14 @@ const Home = () => {
           <div style={{ display: "flex" }}>
             <h2>강태이</h2>
             <div className="skill-div">
-              <h4>React(redux)</h4>
+              <h4>ReactJS</h4>
               <h4>HTML CSS(Sass) JS(ES6)</h4>
               <h4>JAVA nodeJS</h4>
-              <h4>SQL Git</h4>
             </div>
           </div>
-          <p></p>
         </div>
         <span></span>
-        <img src={taei} alt="taeiKang" width="300px" height="450px" />
+        <img src={taei} alt="taeiKang" width="50%" />
       </div>
     </div>
   );
