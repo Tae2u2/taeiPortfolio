@@ -1,15 +1,18 @@
 @use "sass:math"
 @use 'style.sass'
 
-$black: #111010
+$main-color: #8CF4E2
 $white: #fff
-$pink: #f48fb1
+$black: #000000
+$point-color: #B8FDA1
+$edge-color: #4695DC
+$big-button-color: #52BBAB
 
 .container-div
-    margin-left: 30px
-    width: 1000px
-    height: 550px
-    background-color: $black
+    width: 85vw
+    height: 620px
+    margin-left: 15px
+    background-color: $main-color
     border-bottom-left-radius: 5px
     border-bottom-right-radius: 5px
     border-top-right-radius: 5px
@@ -17,7 +20,7 @@ $pink: #f48fb1
 .container-div::after
     content: ""
     position: absolute
-    background-color: $pink
+    background-color: oint-color
     width: 40px
     height: 546px
     transform: translate( 978px ,-549px) rotate(3deg)
@@ -28,22 +31,23 @@ $pink: #f48fb1
 .home-div
     width: 100%
     height: 100%
+    border: 15px solid $main-color
+    background-color: $white
     display: flex
     justify-content: space-evenly
     align-items: center
 
     img
-        border: 1px solid $pink
+        border: 2px solid $edge-color
     span
         position: absolute
         width: 22px
         height: 90px
-        background-color: $pink
-        top: 133px
-        transform: translateX(357px) rotate(-38deg)
+        background-color: $point-color
+        transform: translate(510px , -215px) rotate(-38deg)
 
 .home-text
-    color: $white
+    color: $black
     div
         align-items: center
     h3
@@ -51,24 +55,24 @@ $pink: #f48fb1
         padding: 9px 15px
         letter-spacing: -1px
         font-weight: 400
-        background-color: #f6c4f55b
+        background-color: $point-color
 
     h2
         background-color: $white
         color: $black
         width: 100px
-        height: 40px
+        height: 44px
         border-radius: 5px
         text-align: center
         padding-top: 5px
         transform: rotate(2deg)
         letter-spacing: -2px
-        box-shadow: 2px 2px 1px #bdbddb
+        box-shadow: 2px 2px 1px #bdbddb, -0.5px -0.5px 1px #bdbdbd
     h2::after
         content: ""
         position: absolute
-        transform: translate(-76px , -2px)
-        border: 1.5px solid $pink
+        transform: translate(-76px , 0px)
+        border: 1.5px solid $edge-color
         background-color: transparent
         border-radius: 5px
         width: 90px
@@ -78,10 +82,14 @@ $pink: #f48fb1
     p
         margin-top: 20px
         letter-spacing: -1px
+        width: 300px
+        height: 200px
+        overflow-y: scroll
 
 .project-div
     width: 100%
     height: 100%
+    border: 15px solid $main-color
     background-image: url("../images/graphPaper.jpg")
     display: flex
     flex-direction: column
@@ -117,7 +125,7 @@ $pink: #f48fb1
     background-color: transparent
     border-radius: 5px
 ::-webkit-scrollbar-thumb
-    background-color: $black
+    background-color: #4BD8E8
     border-radius: 5px
 ::-webkit-scrollbar-thumb:hover
     filter: brightness(1.1)
@@ -125,6 +133,8 @@ $pink: #f48fb1
 .contact-div
     width: 100%
     height: 100%
+    border: 15px solid $main-color
+    background-color: $white
     display: flex
     justify-content: space-evenly
     align-items: center
@@ -134,12 +144,13 @@ $pink: #f48fb1
         padding: 15px
         background-color: $white
         border-radius: 10px
-        border-left: 30px solid $pink
+        border-left: 30px solid $big-button-color
+        box-shadow: 2px 2px 1px #bdbdbd,-1px 0px 1px #bdbdbd
         p
             padding-bottom: 7px
             letter-spacing: -0.5px
         span
-            color: $pink
+            color: $big-button-color
             font-size: 1.5em
             position: absolute
             transform: translate( 320px , -10px)
@@ -148,13 +159,14 @@ $pink: #f48fb1
         height: 250px
         a
             text-decoration: none
-            color: $black
+            color: #000000
 
         h4
             display: flex
             justify-content: space-between
             padding: 15px
-            background-color: $white
+            box-shadow: 2px 2px 1px #bdbdbd
+            background-color: $big-button-color
             border-radius: 20px
             margin-bottom: 39px
             cursor: pointer
@@ -162,6 +174,6 @@ $pink: #f48fb1
             margin-bottom: 4px
         small
             float: right
-            color: $black
+            color: $main-color
             padding: 3px 5px
             background-color: #FFE59D
