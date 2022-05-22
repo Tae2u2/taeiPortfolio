@@ -1,4 +1,3 @@
-import Minibar from "components/Minibar";
 import AppRouter from "components/Router";
 import "./style/style.sass";
 import plan from "./images/plants.png";

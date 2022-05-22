@@ -84,6 +84,8 @@ nav
         @content
 
 @include mobile
+    #plant
+        display: none
     nav
         margin: 0
         ul
@@ -113,7 +115,7 @@ nav
             display: flex
             flex-direction: column
             img
-                width: 70%
+                width: 100%
             h4
                 width: 250px
                 margin-left: 0px
@@ -137,19 +139,22 @@ nav
                 margin-bottom: 15px
 
 @include tablet
+    #plant
+        display: none
     .container-div
-        width: 70%
+        width: 80%
     .container-div::after
         display: none
     .home-div
         flex-direction: column-reverse
+        overflow-y: scroll
         img
-            width: 40%
-        span
-            display: none
+            width: 50%
     .project-div
         section
             img
-                width: 200px
+                width: 100%
+            p
+                overflow-y: scroll
     .contact-div
         flex-direction: column
