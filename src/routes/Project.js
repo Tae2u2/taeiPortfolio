@@ -48,7 +48,7 @@ const Project = () => {
           </p>
         </section>
         <section>
-          <img src={cuting} alt="cuting UI" />
+          <img src={cuting} id="cuting-img" alt="cuting UI" />
           <div>
             <h4 style={{ backgroundColor: "#558b2f" }}>Spring</h4>
             <h4 style={{ backgroundColor: "#1E88E5" }}>JSP</h4>
