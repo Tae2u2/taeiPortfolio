@@ -42,7 +42,7 @@ const Project = () => {
             </a>
             <HiCursorClick />
             <br />
-            test ID : testid1234@naver.com
+            test ID : testuser
             <br />
             test PW : testpw1234
           </p>
