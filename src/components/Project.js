@@ -1,6 +1,5 @@
 import React from "react";
-import "../style/routes-style.sass";
-import piggy from "../images/pigMain.jpg";
+import piggy from "../images/pigMain.png";
 import cuting from "../images/cutingHome.png";
 import { HiCursorClick } from "react-icons/hi";
 
@@ -10,7 +9,7 @@ const Project = () => {
       <div className="project-div">
         <section>
           <a href="https://taeistory-piggy.herokuapp.com/">
-            <img src={piggy} id="piggys" alt="pig project" />
+            <img src={piggy} id="piggys" alt="pig project" width="300px" />
             <div id="img-background">
               💚 클릭하시면 해당 페이지로 이동합니다.
             </div>

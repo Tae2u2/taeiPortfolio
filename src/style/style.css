@@ -1,0 +1,116 @@
+@use "sass:math";
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+}
+
+.app button {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  padding-top: 7px;
+  border-radius: 50%;
+  background-color: #F1f8e9;
+  color: #000;
+  font-size: 2em;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+nav {
+  position: fixed;
+  width: 150px;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: #F9fbe7;
+  border-right: 2px solid #000;
+}
+
+nav span {
+  letter-spacing: -1px;
+  font-size: 1.2em;
+  padding-left: 10px;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 5px 10px;
+  color: #000;
+  border-bottom: 1px solid #F9fbe7;
+  font-size: 1.2em;
+  letter-spacing: -0.7px;
+  background-color: #F9fbe7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+nav ul .active {
+  border-bottom: 1px solid #000;
+}
+
+.container-div {
+  width: 100%;
+  height: 620px;
+  border-left: 150px solid #F9fbe7;
+  background-color: #F9fbe7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.home-div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #000;
+}
+
+.home-div .home-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 450px;
+}
+/*# sourceMappingURL=style.css.map */

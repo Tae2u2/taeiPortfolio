@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../style/routes-style.sass";
+
 import { FaGithub, FaGoogle, FaPhoneAlt, FaChild } from "react-icons/fa";
 import { HiCursorClick } from "react-icons/hi";
 

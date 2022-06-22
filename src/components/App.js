@@ -1,6 +1,10 @@
-import AppRouter from "components/Router";
-import "./style/style.sass";
+import "../style/style.css";
 import { BiArrowToTop } from "react-icons/bi";
+import Home from "./Home";
+import Project from "./Project";
+import Contact from "./Contact";
+import Navigation from "./Navigation";
+import Skill from "./Skill";
 
 function App() {
   const goToTheTop = () => {
@@ -12,7 +16,11 @@ function App() {
   };
   return (
     <div className="app">
-      <AppRouter />
+      <Navigation />
+      <Home />
+      <Skill />
+      <Project />
+      <Contact />
       <button onClick={goToTheTop}>
         <BiArrowToTop />
       </button>
