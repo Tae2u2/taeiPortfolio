@@ -12,19 +12,19 @@ const Navigation = () => {
       });
     } else if (indexNumber === 2) {
       window.scrollTo({
-        top: 690,
+        top: 670,
         left: 0,
         behavior: "smooth",
       });
     } else if (indexNumber === 3) {
       window.scrollTo({
-        top: 1300,
+        top: 1245,
         left: 0,
         behavior: "smooth",
       });
     } else if (indexNumber === 4) {
       window.scrollTo({
-        top: 1900,
+        top: 2250,
         left: 0,
         behavior: "smooth",
       });

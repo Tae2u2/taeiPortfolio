@@ -31,7 +31,7 @@ $main-color: #F9fbe7;
     width: 100%;
     height: 100vh;
 
-    button{
+    #top-btn{
     position: fixed;
     bottom: 5px;
     right: 5px;
@@ -85,10 +85,17 @@ nav{
 }
 .container-div{
     width: 100%;
-    height: 620px;
+    height: fit-content;
     border-left: 150px solid $main-color;
     background-color: $main-color;
     transition: 0.3s;
+    .hashtag-title{
+        height: 80px;
+        width: 100%;
+        border-bottom: 2px solid $black;
+        font-size: 4em;
+        letter-spacing: -2px;
+    }
 }
 .home-div{
     width: 100%;
@@ -101,7 +108,115 @@ nav{
         @include for-center-line();
         height: 100%;
         width: 450px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-right: 2px solid $black;
     }
 }
 
+.skill-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .skill-showcase{
+        height: 250px;
+        border-bottom: 2px solid $black;
+        border-right: 2px solid $black;
+        h2{
+            letter-spacing: -1px;
+            font-weight: 400;
+        }
+        p{
+            transition: 0.4s;
+        }
+    }
+    .point{background-color: $point-color;}
+    .erase{border-right: none;}
+    .skill-showcase:hover{background-color: $point-color;}
+    .point:hover{background-color: $main-color;}
+}
 
+.project-div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    border-bottom: 2px solid $black;
+    .project-radio-box{
+        color: #000;
+    }
+    .link-box{
+        width: 800px;
+        height: 450px;
+        background-color: $main-color;
+    }
+    .project-btn{
+        background-color: $white;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+    .project-Img-zone{
+        width: fit-content;
+        height: fit-content;
+        border-bottom: 2px solid $black;
+        border-right: 2px solid $black;
+    }
+    #cuting-position{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        border-right: none;
+        border-left: 2px solid $black;
+        border-top: 2px solid $black;
+    }
+}
+
+.contact-div{
+    display: flex;
+    justify-content: space-between;
+    .id-card{
+        border: 2px solid $black;
+        margin: 100px;
+        h3{
+            border-bottom: 1px solid $black;
+            letter-spacing: -1px;
+        }
+        p{
+            padding: 10px;
+            letter-spacing: -0.5px;
+        }
+    }
+    .contact-card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        div{
+            width: 300px;
+            height: 300px;
+            border-bottom: 1px solid $black;
+            border-left: 1px solid $black;
+            @include for-center-line();
+            h4{
+                @include for-center-line();
+                background-color: $main-color;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                border: 1px solid $black;
+                text-align: center;
+                font-weight: 400;
+                font-size: 1.2em;
+                cursor: pointer;
+            }
+            h4:hover{
+                background-color: $point-color;
+            }
+            a{text-decoration: none; color: #000;}
+            small{
+                position: absolute;
+                transform: translate(30px, 20px);
+                color: #558b2f;
+            }
+        }
+    }
+}

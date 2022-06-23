@@ -21,7 +21,7 @@ function App() {
       <Skill />
       <Project />
       <Contact />
-      <button onClick={goToTheTop}>
+      <button id="top-btn" onClick={goToTheTop}>
         <BiArrowToTop />
       </button>
     </div>
