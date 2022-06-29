@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "../style/style.css";
 import { BiArrowToTop } from "react-icons/bi";
 import Home from "./Home";
@@ -7,6 +8,7 @@ import Navigation from "./Navigation";
 import Skill from "./Skill";
 
 function App() {
+  const [changeNav, setChangeNav] = useState(false);
   const goToTheTop = () => {
     window.scrollTo({
       top: 0,
@@ -16,11 +18,11 @@ function App() {
   };
   return (
     <div className="app">
-      <Navigation />
-      <Home />
-      <Skill />
-      <Project />
-      <Contact />
+      <Navigation changeNav={changeNav} setChangeNav={setChangeNav} />
+      <Home changeNav={changeNav} />
+      <Skill changeNav={changeNav} />
+      <Project changeNav={changeNav} />
+      <Contact changeNav={changeNav} />
       <button id="top-btn" onClick={goToTheTop}>
         <BiArrowToTop />
       </button>

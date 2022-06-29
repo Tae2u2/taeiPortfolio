@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { BsArrowBarLeft, BsArrowBarRight } from "react-icons/bs";
 
-const Navigation = () => {
+const Navigation = ({ changeNav, setChangeNav }) => {
   const [userStayLi, setUserStayLi] = useState(1);
+
   const clickHere = (indexNumber) => {
     setUserStayLi(indexNumber);
     if (indexNumber === 1) {
@@ -30,27 +32,40 @@ const Navigation = () => {
       });
     }
   };
+
+  const handleNavbar = () => {
+    setChangeNav(!changeNav);
+  };
+
   return (
-    <nav>
-      <span>Taei Portfolio</span>
+    <nav className={changeNav ? "navi change-width" : "navi"}>
+      <span>
+        Taei Portfolio
+        <i onClick={handleNavbar}>
+          {changeNav ? <BsArrowBarRight /> : <BsArrowBarLeft />}
+        </i>
+      </span>
       <ul>
         <li
           onClick={() => clickHere(1)}
           className={userStayLi === 1 ? "nav-li active" : "nav-li"}
         >
           Introduce
+          {changeNav && <b>I</b>}
         </li>
         <li
           onClick={() => clickHere(2)}
           className={userStayLi === 2 ? "nav-li active" : "nav-li"}
         >
           Skill
+          {changeNav && <b>S</b>}
         </li>
         <li
           onClick={() => clickHere(3)}
           className={userStayLi === 3 ? "nav-li active" : "nav-li"}
         >
           Project
+          {changeNav && <b>P</b>}
         </li>
 
         <li
@@ -58,6 +73,7 @@ const Navigation = () => {
           className={userStayLi === 4 ? "nav-li active" : "nav-li"}
         >
           Contact
+          {changeNav && <b>C</b>}
         </li>
       </ul>
     </nav>

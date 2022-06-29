@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { FaGithub } from "react-icons/fa";
 
-const Contact = () => {
+const Contact = ({ changeNav }) => {
   const [tel, setTel] = useState("연락처");
   const [successCopy, setSuccessCopy] = useState(false);
 
@@ -13,7 +13,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container-div">
+    <div className={changeNav ? "container-div wider-screen" : "container-div"}>
       <h1 className="hashtag-title">#CONTACT</h1>
       <div className="contact-div">
         <div className="id-card">

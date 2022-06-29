@@ -1,15 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 @use "sass:math";
 
 @mixin for-center-line(){
     display: flex;
     justify-content: center;
     align-items: center;
-}
+};
 
 @mixin flex-between(){
     display: flex;
     justify-content: space-between;
-}
+};
+@mixin border-line(){
+    border: 2px solid #000;
+};
 
 //@include flex-between
 
@@ -30,7 +35,7 @@ $main-color: #F9fbe7;
 .app{
     width: 100%;
     height: 100vh;
-
+    overflow-x: hidden;
     #top-btn{
     position: fixed;
     bottom: 5px;
@@ -54,10 +59,19 @@ nav{
     top: 0;
     background-color: $main-color;
     border-right: 2px solid $black;
+    transition: 0.4s;
     span{
+        display: flex;
         letter-spacing: -1px;
         font-size: 1.2em;
+        font-family: 'Nanum Myeongjo', serif;
         padding-left: 10px;
+    }
+    i{
+        float: right;
+        font-size: 1.3em;
+        cursor: pointer;
+        margin-left: 10px;
     }
     ul{
         display: flex;
@@ -68,20 +82,29 @@ nav{
         transition: 0.3s;
     
         li{
+            display: flex;
+            justify-content: space-between;
             list-style: none;
             padding: 5px 10px;
             color: $black;
             border-bottom: 1px solid $main-color;
             font-size: 1.2em;
+            font-family: 'Nanum Myeongjo', serif;
             letter-spacing: -0.7px;
             background-color: $main-color;
             transition: 0.3s;
             cursor: pointer;
+            b{
+                font-family: 'Nanum Myeongjo', serif;
+            }
         }
         .active{
             border-bottom: 1px solid $black;
         }
     }   
+}
+.change-width{
+    transform: translateX(-110px);
 }
 .container-div{
     width: 100%;
@@ -91,11 +114,17 @@ nav{
     transition: 0.3s;
     .hashtag-title{
         height: 80px;
+        line-height: 75px;
         width: 100%;
         border-bottom: 2px solid $black;
+        font-family: 'Song Myung', serif;
         font-size: 4em;
+        font-weight: 400;
         letter-spacing: -2px;
     }
+}
+.wider-screen{
+    border-left: 40px solid $main-color;
 }
 .home-div{
     width: 100%;
@@ -112,7 +141,31 @@ nav{
         padding-bottom: 25px;
         border-right: 2px solid $black;
     }
+    .home-item{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .home-h1{
+            display: flex;
+            justify-content: flex-start;
+            font-size: 4em;
+            margin-right: 10px;
+            span{
+                font-size: 0.9em;
+                font-weight: 400;
+                animation: typo-cursor linear 1s infinite;
+            }
+        }
+    }
 }
+
+@keyframes typo-cursor{
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    60%{opacity: 1;}
+    100%{opacity: 1;}
+}
+
 
 .skill-div{
     display: grid;
@@ -137,37 +190,51 @@ nav{
 
 .project-div{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     border-bottom: 2px solid $black;
-    .project-radio-box{
-        color: #000;
-    }
-    .link-box{
-        width: 800px;
-        height: 450px;
-        background-color: $main-color;
-    }
-    .project-btn{
-        background-color: $white;
-        width: 50px;
-        height: 50px;
-        border-radius: 10px;
-        border: none;
-        cursor: pointer;
+    section{
+        margin: 20px;
+        display: flex;
+        .button-set{
+            display: flex;
+            width: 244px;
+            height: 40px;
+            border-right: 2px solid #000;
+            .link-btn{
+                @include border-line();
+                border-top: none;
+                border-right: none;
+                background-color: $main-color;
+                width: 81px;
+                height: 100%;
+                font-size: 1.3em;
+                cursor: pointer;
+            }
+            .link-btn:nth-child(3){
+                background-color: #f2d338;
+            }
+        }
+        p{
+            width: fit-content;
+            height: 100%;
+            padding-left: 30px;
+            margin-left: 30px;
+            border-left: 2px solid #424242;
+        }
     }
     .project-Img-zone{
         width: fit-content;
         height: fit-content;
-        border-bottom: 2px solid $black;
-        border-right: 2px solid $black;
+        border: 2px solid $black;
+    }
+    #petal-position{
+        grid-column-start: 3;
+        grid-row-start: 2;
     }
     #cuting-position{
-        grid-column-start: 2;
-        grid-row-start: 2;
-        border-right: none;
-        border-left: 2px solid $black;
-        border-top: 2px solid $black;
+        grid-row-start: 3;
+
     }
 }
 
