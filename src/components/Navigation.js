@@ -3,7 +3,19 @@ import { BsArrowBarLeft, BsArrowBarRight } from "react-icons/bs";
 
 const Navigation = ({ changeNav, setChangeNav }) => {
   const [userStayLi, setUserStayLi] = useState(1);
+  const [position, setPosition] = useState(0);
 
+  const scrollHere = (indexNumber) => {
+    if (window.scrollY > 670) {
+      setUserStayLi(indexNumber);
+    } else if (window.scrollY > 1245) {
+      setUserStayLi(indexNumber);
+    } else if (window.scrollY > 2250) {
+      setUserStayLi(indexNumber);
+    } else {
+      setUserStayLi(indexNumber);
+    }
+  };
   const clickHere = (indexNumber) => {
     setUserStayLi(indexNumber);
     if (indexNumber === 1) {
@@ -12,24 +24,28 @@ const Navigation = ({ changeNav, setChangeNav }) => {
         left: 0,
         behavior: "smooth",
       });
+      scrollHere(indexNumber);
     } else if (indexNumber === 2) {
       window.scrollTo({
         top: 670,
         left: 0,
         behavior: "smooth",
       });
+      scrollHere(indexNumber);
     } else if (indexNumber === 3) {
       window.scrollTo({
         top: 1245,
         left: 0,
         behavior: "smooth",
       });
+      scrollHere(indexNumber);
     } else if (indexNumber === 4) {
       window.scrollTo({
         top: 2250,
         left: 0,
         behavior: "smooth",
       });
+      scrollHere(indexNumber);
     }
   };
 

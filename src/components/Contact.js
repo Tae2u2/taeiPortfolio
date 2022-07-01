@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
 const Contact = ({ changeNav }) => {
-  const [tel, setTel] = useState("연락처");
   const [successCopy, setSuccessCopy] = useState(false);
 
   const copyEmail = () => {
@@ -45,12 +44,10 @@ const Contact = ({ changeNav }) => {
         </div>
         <div className="contact-card">
           <div>
-            <a href="https://github.com/Tae2u2">
-              <h4>
-                <FaGithub />
-                GitHub
-              </h4>
-            </a>
+            <h4 onClick={() => window.open("https://github.com/Tae2u2")}>
+              <FaGithub />
+              GitHub
+            </h4>
           </div>
           <div>
             <h4>010-9349-0913</h4>

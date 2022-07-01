@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../style/style.css";
 import { BiArrowToTop } from "react-icons/bi";
 import Home from "./Home";
@@ -9,6 +9,11 @@ import Skill from "./Skill";
 
 function App() {
   const [changeNav, setChangeNav] = useState(false);
+  const [position, setPosition] = useState(0);
+
+  const handleShowTopBtn = () => {
+    setPosition(window.scrollY);
+  };
   const goToTheTop = () => {
     window.scrollTo({
       top: 0,
@@ -16,6 +21,13 @@ function App() {
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleShowTopBtn);
+    return () => {
+      window.removeEventListener("scroll", handleShowTopBtn);
+    };
+  }, []);
   return (
     <div className="app">
       <Navigation changeNav={changeNav} setChangeNav={setChangeNav} />
@@ -23,9 +35,11 @@ function App() {
       <Skill changeNav={changeNav} />
       <Project changeNav={changeNav} />
       <Contact changeNav={changeNav} />
-      <button id="top-btn" onClick={goToTheTop}>
-        <BiArrowToTop />
-      </button>
+      {position > 100 && (
+        <button id="top-btn" onClick={goToTheTop}>
+          <BiArrowToTop />
+        </button>
+      )}
     </div>
   );
 }
