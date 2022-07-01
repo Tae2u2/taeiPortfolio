@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/taeiPortfolio/static/css/main.b520e618.css",
-    "main.js": "/taeiPortfolio/static/js/main.14cdf6af.js",
-    "static/media/graphPaper.jpg": "/taeiPortfolio/static/media/graphPaper.fba5641eb378a016eb2f.jpg",
-    "static/media/cutingHome.png": "/taeiPortfolio/static/media/cutingHome.0801b9d6d71855dac810.png",
-    "static/media/taei.JPG": "/taeiPortfolio/static/media/taei.d51060a94dd911d4a290.JPG",
-    "static/media/pigMain.jpg": "/taeiPortfolio/static/media/pigMain.21f2214724f0e91a6b1d.jpg",
+    "main.css": "/taeiPortfolio/static/css/main.4980fec6.css",
+    "main.js": "/taeiPortfolio/static/js/main.bc10e08a.js",
+    "static/media/taei.jpg": "/taeiPortfolio/static/media/taei.e0dd291a1aa3bffaa077.jpg",
+    "static/media/cuting.png": "/taeiPortfolio/static/media/cuting.f865a8d7bdebbcf84ce3.png",
+    "static/media/petals-logo.png": "/taeiPortfolio/static/media/petals-logo.7785e19d913082858738.png",
+    "static/media/travel-pig.jpg": "/taeiPortfolio/static/media/travel-pig.1bcce7c3fcbfac3b3911.jpg",
     "index.html": "/taeiPortfolio/index.html",
-    "main.b520e618.css.map": "/taeiPortfolio/static/css/main.b520e618.css.map",
-    "main.14cdf6af.js.map": "/taeiPortfolio/static/js/main.14cdf6af.js.map"
+    "main.4980fec6.css.map": "/taeiPortfolio/static/css/main.4980fec6.css.map",
+    "main.bc10e08a.js.map": "/taeiPortfolio/static/js/main.bc10e08a.js.map"
   },
   "entrypoints": [
-    "static/css/main.b520e618.css",
-    "static/js/main.14cdf6af.js"
+    "static/css/main.4980fec6.css",
+    "static/js/main.bc10e08a.js"
   ]
 }
