@@ -1,19 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import taei from "../images/taei.jpg";
 
 const Home = ({ changeNav }) => {
-  const [position, setPosition] = useState(670);
-
-  const onScroll = () => {
-    setPosition(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
   return (
     <div className={changeNav ? "container-div wider-screen" : "container-div"}>
       <h1 className="hashtag-title">#INTRODUCE</h1>
@@ -28,9 +16,8 @@ const Home = ({ changeNav }) => {
               <span>positive</span>) person"
             </h2>
 
-            <h1 className={position < 600 ? "home-h1 typing" : "home-h1"}>
-              WEB FRONTEND DEVELOPER.
-              <span>|</span>
+            <h1 className="home-h1">
+              <span>WEB FRONTEND DEVELOPER.</span>
             </h1>
             <p>
               안녕하세요. 웹 개발자를 꿈꾸는 강태이입니다. <br />

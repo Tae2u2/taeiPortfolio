@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const Skill = ({ changeNav }) => {
   return (
@@ -6,7 +6,7 @@ const Skill = ({ changeNav }) => {
       <h1 className="hashtag-title">#SKILL SET</h1>
       <div className="skill-div">
         <section className="skill-showcase">
-          <input type="radio" id="section1" name="display-detail" />
+          <input type="checkbox" id="section1" name="display-detail" />
           <label htmlFor="section1" id="react">
             ReactJS
           </label>
@@ -19,8 +19,9 @@ const Skill = ({ changeNav }) => {
             <br />- 함수형 컴포넌트 위주의 개발 경험
           </article>
         </section>
-        <section className="skill-showcase point">
-          <input type="radio" id="section2" name="display-detail" />
+        <span className="draw-line"></span>
+        <section className="skill-showcase">
+          <input type="checkbox" id="section2" name="display-detail" />
           <label htmlFor="section2" id="markup">
             HTML5 CSS3(Scss)
           </label>
@@ -33,8 +34,9 @@ const Skill = ({ changeNav }) => {
             <br />
           </article>
         </section>
-        <section className="skill-showcase erase">
-          <input type="radio" id="section3" name="display-detail" />
+
+        <section className="skill-showcase">
+          <input type="checkbox" id="section3" name="display-detail" />
           <label htmlFor="section3" id="js">
             JavaScript(ES6)
           </label>
@@ -47,8 +49,9 @@ const Skill = ({ changeNav }) => {
             <br />- 로컬스토리지 활용
           </article>
         </section>
-        <section className="skill-showcase point">
-          <input type="radio" id="section4" name="display-detail" />
+
+        <section className="skill-showcase">
+          <input type="checkbox" id="section4" name="display-detail" />
           <label htmlFor="section4" id="java">
             JAVA
           </label>
@@ -59,8 +62,10 @@ const Skill = ({ changeNav }) => {
             <br />- 알고리즘 스터디 운영 경험(2달 주3회)
           </article>
         </section>
+        <span className="draw-line"></span>
+        <span className="draw-line"></span>
         <section className="skill-showcase">
-          <input type="radio" id="section5" name="display-detail" />
+          <input type="checkbox" id="section5" name="display-detail" />
           <label htmlFor="section5" id="sql">
             SQL(Oracle, MySQL)
           </label>
@@ -73,8 +78,8 @@ const Skill = ({ changeNav }) => {
             <br />
           </article>
         </section>
-        <section className="skill-showcase erase">
-          <input type="radio" id="section6" name="display-detail" />
+        <section className="skill-showcase">
+          <input type="checkbox" id="section6" name="display-detail" />
           <label htmlFor="section6" id="etc">
             etc
           </label>

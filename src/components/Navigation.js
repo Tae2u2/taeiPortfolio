@@ -1,21 +1,9 @@
 import React, { useState } from "react";
 import { BsArrowBarLeft, BsArrowBarRight } from "react-icons/bs";
 
-const Navigation = ({ changeNav, setChangeNav }) => {
+const Navigation = ({ changeNav, setChangeNav, position }) => {
   const [userStayLi, setUserStayLi] = useState(1);
-  const [position, setPosition] = useState(0);
 
-  const scrollHere = (indexNumber) => {
-    if (window.scrollY > 670) {
-      setUserStayLi(indexNumber);
-    } else if (window.scrollY > 1245) {
-      setUserStayLi(indexNumber);
-    } else if (window.scrollY > 2250) {
-      setUserStayLi(indexNumber);
-    } else {
-      setUserStayLi(indexNumber);
-    }
-  };
   const clickHere = (indexNumber) => {
     setUserStayLi(indexNumber);
     if (indexNumber === 1) {
@@ -24,28 +12,24 @@ const Navigation = ({ changeNav, setChangeNav }) => {
         left: 0,
         behavior: "smooth",
       });
-      scrollHere(indexNumber);
     } else if (indexNumber === 2) {
       window.scrollTo({
         top: 670,
         left: 0,
         behavior: "smooth",
       });
-      scrollHere(indexNumber);
     } else if (indexNumber === 3) {
       window.scrollTo({
         top: 1245,
         left: 0,
         behavior: "smooth",
       });
-      scrollHere(indexNumber);
     } else if (indexNumber === 4) {
       window.scrollTo({
         top: 2250,
         left: 0,
         behavior: "smooth",
       });
-      scrollHere(indexNumber);
     }
   };
 
@@ -64,21 +48,25 @@ const Navigation = ({ changeNav, setChangeNav }) => {
       <ul>
         <li
           onClick={() => clickHere(1)}
-          className={userStayLi === 1 ? "nav-li active" : "nav-li"}
+          className={position < 570 ? "nav-li active" : "nav-li"}
         >
           Introduce
           {changeNav && <b>I</b>}
         </li>
         <li
           onClick={() => clickHere(2)}
-          className={userStayLi === 2 ? "nav-li active" : "nav-li"}
+          className={
+            570 < position && position < 1200 ? "nav-li active" : "nav-li"
+          }
         >
           Skill
           {changeNav && <b>S</b>}
         </li>
         <li
           onClick={() => clickHere(3)}
-          className={userStayLi === 3 ? "nav-li active" : "nav-li"}
+          className={
+            1200 < position && position < 2100 ? "nav-li active" : "nav-li"
+          }
         >
           Project
           {changeNav && <b>P</b>}
@@ -86,7 +74,7 @@ const Navigation = ({ changeNav, setChangeNav }) => {
 
         <li
           onClick={() => clickHere(4)}
-          className={userStayLi === 4 ? "nav-li active" : "nav-li"}
+          className={2100 < position ? "nav-li active" : "nav-li"}
         >
           Contact
           {changeNav && <b>C</b>}

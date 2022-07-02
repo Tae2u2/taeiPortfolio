@@ -30,9 +30,13 @@ function App() {
   }, []);
   return (
     <div className="app">
-      <Navigation changeNav={changeNav} setChangeNav={setChangeNav} />
-      <Home changeNav={changeNav} />
-      <Skill changeNav={changeNav} />
+      <Navigation
+        changeNav={changeNav}
+        setChangeNav={setChangeNav}
+        position={position}
+      />
+      <Home changeNav={changeNav} position={position} />
+      <Skill changeNav={changeNav} position={position} />
       <Project changeNav={changeNav} />
       <Contact changeNav={changeNav} />
       {position > 100 && (
