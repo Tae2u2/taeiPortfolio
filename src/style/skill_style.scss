@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Nanum+Myeongjo&family=Song+Myung&display=swap');
+
+
+$point-color: #F1f8e9;
+$white: #fff;
+$black: #000;
+$main-color: #F9fbe7;
+
+.skill-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 2px solid #000;
+    .skill-showcase{
+        height: 250px;
+
+        background-color: $point-color;
+        label{
+            display: block;
+            position: relative;
+            letter-spacing: -1px;
+            font-weight: 400;
+            font-size: 1.8em;
+            font-family: 'Nanum Myeongjo', serif;
+            margin-bottom: 15px;
+            padding-left:  15px;
+            padding-bottom: 5px;
+            cursor: pointer;
+            transition: background 0.4s;
+        }
+        label::after{
+            content:"▼";
+            position:absolute;
+            top: 30%;
+            right: 20px;
+            font-size: 1rem;
+            transform: translateY(-50%);
+            width:12px;
+            height: 6px;
+            transition: transform 0.4s;
+        }
+        input{
+            float: right;
+            border: none;
+            outline: none;
+            padding: 15px;
+            display: none;
+        }
+        p{
+            transition: 0.4s;
+        }
+        article{
+            display: none;
+            font-family: 'Nanum Myeongjo', serif;
+            line-height: 26px;
+            font-size: 1.1em;
+            transition: 0.4s;
+        }
+        input:checked ~ article{
+            display: block;
+        }
+        input:checked ~ article::after{
+            transform: translateY(-50%) rotate(0.5turn);
+        }
+    }
+
+}

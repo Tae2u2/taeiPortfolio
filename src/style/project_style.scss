@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Nanum+Myeongjo&family=Song+Myung&display=swap');
+
+@mixin for-center-line(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+
+@mixin border-line(){
+    border: 2px solid #000;
+};
+
+
+$point-color: #F1f8e9;
+$white: #fff;
+$black: #000;
+$main-color: #F9fbe7;
+
+.project-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    border-bottom: 2px solid $black;
+    section{
+        margin: 20px;
+        display: flex;
+        border-right: 2px solid #000;
+        .button-set{
+            display: flex;
+            width: 244px;
+            height: 40px;
+            border-right: 2px solid #000;
+            .link-btn{
+                @include border-line();
+                border-top: none;
+                border-right: none;
+                background-color: $main-color;
+                width: 81px;
+                height: 100%;
+                font-size: 1.3em;
+                cursor: pointer;
+                transition: 0.4s;
+            }
+            .link-btn:hover{
+                background-color: #f2d338;
+            }
+            .link-btn:nth-child(3){
+                background-color: #f2d338;
+            }
+        }
+    }
+    p{
+        padding-top: 30px;
+        letter-spacing: -0.8px;
+        font-size: 1.2em;
+        font-family: 'Gothic A1', sans-serif;
+        line-height: 26px;
+    }
+    .project-Img-zone{
+        width: fit-content;
+        height: fit-content;
+        border: 2px solid $black;
+        overflow: hidden;
+        img{transition: 0.4s;}
+        img:hover{
+            transform: scale(1.2);
+        }
+    }
+    .mini-box{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 2;
+        grid-row-end: span 3;
+        border-right: none;
+        height: fit-content;
+        padding-bottom: 50px;
+        border-bottom: thick double #000;
+        div{
+            @include for-center-line();
+            justify-content: space-around;
+            
+        }
+        h1{
+            text-align: center;
+            letter-spacing: -2px;
+            font-family: 'Gothic A1', sans-serif;
+            padding-bottom: 25px;
+            padding-top: 15px;
+            border-top: thick double #000;
+            
+        }
+        .mini-item{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            transition: all .4s;
+            padding-left: 30px;
+            transform: translateX(-40px);
+            div{
+                overflow: hidden;
+                border: 2px solid #000;
+                border-top: 4px solid #000;
+                margin: 0 30px;
+                transition: 0.4s;
+                img{
+                    transition: 0.3s;
+                    filter: saturate(0%);
+                    cursor: pointer;
+                }
+                img:hover{
+                    transform: scale(1.1);
+                    filter: saturate(100%);
+                }
+                .color{
+                    filter: saturate(100%);
+                }
+            }
+            .mini-p{
+                opacity: 0;
+                transition: 0.4s;
+            }
+            .show-comment{
+                opacity: 1;
+                width: 250px;
+                height: fit-content;
+                padding: 20px 20px;
+                margin-bottom: 15px;
+                font-weight: 400;
+                letter-spacing: -1px;
+                text-align: center;
+                font-size: 1rem;
+                font-style:'Gothic A1', sans-serif;
+                background-color: $point-color;
+                @include border-line();
+                border-top: 4px solid #000;
+                transition: 0.4s;
+            }
+        }
+        
+    }
+    #cuting-position{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        border-right: none;
+        padding-left: 40px;
+        border-left: 2px solid #000;
+    }
+    #cuting-text{
+        grid-column-start: 2;
+        grid-row-start: 4;
+        text-align: right;
+    }
+}

@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Nanum+Myeongjo&family=Song+Myung&display=swap");
+.skill-div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  border-bottom: 2px solid #000;
+}
+
+.skill-div .skill-showcase {
+  height: 250px;
+  background-color: #F1f8e9;
+}
+
+.skill-div .skill-showcase label {
+  display: block;
+  position: relative;
+  letter-spacing: -1px;
+  font-weight: 400;
+  font-size: 1.8em;
+  font-family: 'Nanum Myeongjo', serif;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s;
+}
+
+.skill-div .skill-showcase label::after {
+  content: "▼";
+  position: absolute;
+  top: 30%;
+  right: 20px;
+  font-size: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 12px;
+  height: 6px;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.skill-div .skill-showcase input {
+  float: right;
+  border: none;
+  outline: none;
+  padding: 15px;
+  display: none;
+}
+
+.skill-div .skill-showcase p {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.skill-div .skill-showcase article {
+  display: none;
+  font-family: 'Nanum Myeongjo', serif;
+  line-height: 26px;
+  font-size: 1.1em;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.skill-div .skill-showcase input:checked ~ article {
+  display: block;
+}
+
+.skill-div .skill-showcase input:checked ~ article::after {
+  -webkit-transform: translateY(-50%) rotate(0.5turn);
+          transform: translateY(-50%) rotate(0.5turn);
+}
+/*# sourceMappingURL=skill_style.css.map */

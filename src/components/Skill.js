@@ -1,4 +1,5 @@
 import React from "react";
+import "../style/skill_style.css";
 
 const Skill = ({ changeNav }) => {
   return (

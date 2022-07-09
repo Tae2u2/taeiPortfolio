@@ -20,13 +20,13 @@ const Navigation = ({ changeNav, setChangeNav, position }) => {
       });
     } else if (indexNumber === 3) {
       window.scrollTo({
-        top: 1245,
+        top: 1500,
         left: 0,
         behavior: "smooth",
       });
     } else if (indexNumber === 4) {
       window.scrollTo({
-        top: 2250,
+        top: 2900,
         left: 0,
         behavior: "smooth",
       });

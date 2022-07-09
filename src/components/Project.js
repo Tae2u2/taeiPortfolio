@@ -1,9 +1,12 @@
 import React from "react";
 import piggy from "../images/travel-pig.jpg";
 import cuting from "../images/cuting.png";
-import petals from "../images/petals-logo.png";
+import "../style/project_style.css";
+
 import { BiLinkExternal } from "react-icons/bi";
-import { BsGithub, BsImages } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import { SiNotion } from "react-icons/si";
+import MiniProject from "./MiniProject";
 
 const Project = ({ changeNav }) => {
   return (
@@ -24,8 +27,15 @@ const Project = ({ changeNav }) => {
               >
                 <BsGithub />
               </button>
-              <button className="link-btn">
-                <BsImages />
+              <button
+                className="link-btn"
+                onClick={() =>
+                  window.open(
+                    "https://bubble-account-b8f.notion.site/0ef07988d4264a48a55f4109d4255e7f"
+                  )
+                }
+              >
+                <SiNotion />
               </button>
               <button
                 onClick={() => window.open("https://travel-pig.herokuapp.com/")}
@@ -51,42 +61,21 @@ const Project = ({ changeNav }) => {
           <br />
           ReactJS, SCSS, nodeJS, MYSQL, AWS(RDS), heroku
         </p>
-        <p id="petal-text">
-          <b>Petal-May-Jasmine</b> <br />
-          SNS 클론코딩 <br />
+        <MiniProject />
+        <p id="cuting-text">
+          <b>큐팅</b>
           <br />
-          개인프로젝트 <br />
-          2022.01 (1개월) <br />
-          ReactJS, CSS, firebase <br />
+          이용자가 반려동물 사진을 자유롭게 거래하고,
+          <br />
+          커뮤니티를 통해 소통할 수 있는 오픈마켓 웹 서비스
+          <br />
+          <br />
+          5인 팀프로젝트(팀장, FE-70% / BE-30%)
+          <br />
+          2021.07 ~ 09 (3개월)
+          <br />
+          SpringMVC, JSP, CSS, Javascript, Oracle, Tomcat
         </p>
-        <section id="petal-position">
-          <div>
-            <div className="project-Img-zone">
-              <img
-                src={petals}
-                id="petal-img"
-                alt="sns clone project"
-                width="240px"
-              />
-            </div>
-            <div className="button-set">
-              <button
-                onClick={() =>
-                  window.open("https://github.com/Tae2u2/Petal-may_jasmine")
-                }
-                className="link-btn"
-              >
-                <BsGithub />
-              </button>
-              <button className="link-btn">
-                <BsImages />
-              </button>
-              <button className="link-btn">
-                <BiLinkExternal />
-              </button>
-            </div>
-          </div>
-        </section>
         <section id="cuting-position">
           <div>
             <div className="project-Img-zone">
@@ -102,7 +91,7 @@ const Project = ({ changeNav }) => {
                 <BsGithub />
               </button>
               <button className="link-btn">
-                <BsImages />
+                <SiNotion />
               </button>
               <button className="link-btn">
                 <BiLinkExternal />
@@ -110,20 +99,6 @@ const Project = ({ changeNav }) => {
             </div>
           </div>
         </section>
-        <p id="cuting-text">
-          <b>큐팅</b>
-          <br />
-          이용자가 반려동물 사진을 자유롭게 거래하고,
-          <br />
-          커뮤니티를 통해 소통할 수 있는 오픈마켓 웹 서비스
-          <br />
-          <br />
-          5인 팀프로젝트(팀장, FE-70% / BE-30%)
-          <br />
-          2021.07 ~ 09 (3개월)
-          <br />
-          SpringMVC, JSP, CSS, Javascript, Oracle, Tomcat
-        </p>
       </div>
     </div>
   );
