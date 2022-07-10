@@ -10,6 +10,17 @@
     border: 2px solid #000;
 };
 
+@mixin draw-column() {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+//@include flex-between
+
+$breakpoint-mobile: 335px;
+$breakpoint-tablet: 758px;
+$breakpoint-desktop: 1024px;
 
 $point-color: #F1f8e9;
 $white: #fff;
@@ -95,12 +106,10 @@ $main-color: #F9fbe7;
             flex-direction: column;
             transition: all .4s;
             padding-left: 30px;
-            transform: translateX(-40px);
             div{
                 overflow: hidden;
                 border: 2px solid #000;
                 border-top: 4px solid #000;
-                margin: 0 30px;
                 transition: 0.4s;
                 img{
                     transition: 0.3s;
@@ -150,4 +159,121 @@ $main-color: #F9fbe7;
         grid-row-start: 4;
         text-align: right;
     }
+
+    #pdf-modal{
+        position: absolute;
+        @include for-center-line();
+        flex-direction: column;
+        transform: translate(200px , 600px);
+        width: 800px;
+        height: 800px;
+        background-color: $main-color;
+        @include border-line();
+        button{
+            background-color: $main-color;
+            @include border-line();
+            font-size: 1.2em;
+            padding: 10px 25px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+    }
 }
+
+
+@mixin mobile {
+    @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+      @content;
+    }
+  }
+  
+  
+  @include mobile {
+    .project-div{
+        @include draw-column();
+        section{
+            flex-direction: column;
+            border: none;
+        }
+        p{
+            font-size: 1em;
+            margin-left: 15px;
+            margin-bottom: 15px;
+        }
+        #cuting-position{
+            border: none;
+        }
+        #cuting-text{
+            text-align: left;
+            padding-left: 10px;
+            font-size: 1em;
+        }
+        #pdf-modal{
+            transform: translate(-55px , -200px);
+            width: 90%;
+            height: 500px;
+            embed{
+                width: 90%;
+                height: 500px;
+            }
+        }
+        .mini-box{
+            div{
+                flex-direction: column;
+                margin-top: 30px;
+            }
+            .mini-item{
+                transform: translateX(0px);
+            }
+        }
+       }
+  
+  }
+  
+  @include tablet {
+    .project-div{
+        @include draw-column();
+        section{
+            flex-direction: column;
+            border: none;
+        }
+        p{
+            font-size: 1em;
+            margin-left: 15px;
+            margin-bottom: 15px;
+        }
+        #cuting-position{
+            border: none;
+        }
+        #cuting-text{
+            text-align: left;
+            padding-left: 10px;
+            font-size: 1em;
+        }
+        #pdf-modal{
+            transform: translate(-50px , -200px);
+            width: 600px;
+            height: 700px;
+            embed{
+                width: 600px;
+                height: 700px;
+            }
+        }
+        .mini-box{
+            div{
+                flex-direction: column;
+                margin-top: 30px;
+            }
+            .mini-item{
+                transform: translateX(0px);
+            }
+        }
+       }
+  
+  }

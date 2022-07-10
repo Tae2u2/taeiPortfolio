@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Nanum+Myeongjo&family=Song+Myung&display=swap");
-@use "sass:math";
 * {
   margin: 0px;
   padding: 0px;
@@ -132,144 +131,6 @@ nav ul .active {
   border-left: 40px solid #F9fbe7;
 }
 
-.home-div {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 2px solid #000;
-}
-
-.home-div .home-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  width: 450px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border-right: 2px solid #000;
-}
-
-.home-div .home-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.home-div .home-item .home-h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  font-size: 4em;
-  margin-right: 10px;
-  letter-spacing: -2px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  overflow-y: hidden;
-}
-
-.home-div .home-item .home-h1 span {
-  position: relative;
-}
-
-.home-div .home-item .home-h1 span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #F9fbe7;
-  border-left: 2px solid #000;
-  -webkit-animation: typing 3s steps(23) 2s 1 forwards;
-          animation: typing 3s steps(23) 2s 1 forwards;
-}
-
-.home-div .home-item h2 {
-  letter-spacing: -1px;
-  margin-right: 50px;
-  font-size: 2em;
-  font-family: 'Gothic A1', sans-serif;
-}
-
-.home-div .home-item h2 span {
-  margin: 0px 15px;
-  padding: 5px 4px;
-  background-color: #424242;
-  color: #fff;
-  opacity: 0;
-  -webkit-animation: appear 1s linear 1s 1 forwards;
-          animation: appear 1s linear 1s 1 forwards;
-}
-
-.home-div .home-item p {
-  padding-top: 30px;
-  text-align: right;
-  letter-spacing: -0.8px;
-  line-height: 25px;
-  margin-right: 30px;
-  font-size: 1.2em;
-  font-family: 'Gothic A1', sans-serif;
-  opacity: 0;
-  -webkit-animation: appear 3s linear 5s 1 forwards;
-          animation: appear 3s linear 5s 1 forwards;
-}
-
-@-webkit-keyframes typing {
-  100% {
-    left: 100%;
-    margin: 0 -35px 0 35px;
-  }
-}
-
-@keyframes typing {
-  100% {
-    left: 100%;
-    margin: 0 -35px 0 35px;
-  }
-}
-
-@-webkit-keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .contact-div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -302,6 +163,8 @@ nav ul .active {
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .contact-div .contact-card div {
@@ -377,5 +240,81 @@ nav ul .active {
 ::-webkit-scrollbar-thumb {
   background-color: #424242;
   border-radius: 5px;
+}
+
+@media (min-width: 335px) and (max-width: 757px) {
+  .contact-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .contact-div .id-card {
+    margin: 20px;
+  }
+  .contact-div .contact-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .contact-div .contact-card div {
+    width: 180px;
+    height: 180px;
+    border: none;
+    margin-left: 20px;
+  }
+  .contact-div .contact-card div h4 {
+    width: 180px;
+    height: 180px;
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 758px) and (max-width: 1023px) {
+  .contact-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .contact-div .id-card {
+    margin: 20px;
+  }
+  .contact-div .contact-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact-div .contact-card div {
+    width: 200px;
+    height: 200px;
+    border: none;
+  }
+  .contact-div .contact-card div h4 {
+    width: 200px;
+    height: 200px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

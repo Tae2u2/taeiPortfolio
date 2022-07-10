@@ -128,15 +128,12 @@
   -webkit-transition: all .4s;
   transition: all .4s;
   padding-left: 30px;
-  -webkit-transform: translateX(-40px);
-          transform: translateX(-40px);
 }
 
 .project-div .mini-box .mini-item div {
   overflow: hidden;
   border: 2px solid #000;
   border-top: 4px solid #000;
-  margin: 0 30px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -203,5 +200,149 @@
   -ms-grid-row: 4;
       grid-row-start: 4;
   text-align: right;
+}
+
+.project-div #pdf-modal {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translate(200px, 600px);
+          transform: translate(200px, 600px);
+  width: 800px;
+  height: 800px;
+  background-color: #F9fbe7;
+  border: 2px solid #000;
+}
+
+.project-div #pdf-modal button {
+  background-color: #F9fbe7;
+  border: 2px solid #000;
+  font-size: 1.2em;
+  padding: 10px 25px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+@media (min-width: 335px) and (max-width: 757px) {
+  .project-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .project-div section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: none;
+  }
+  .project-div p {
+    font-size: 1em;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+  .project-div #cuting-position {
+    border: none;
+  }
+  .project-div #cuting-text {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1em;
+  }
+  .project-div #pdf-modal {
+    -webkit-transform: translate(-55px, -200px);
+            transform: translate(-55px, -200px);
+    width: 90%;
+    height: 500px;
+  }
+  .project-div #pdf-modal embed {
+    width: 90%;
+    height: 500px;
+  }
+  .project-div .mini-box div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 30px;
+  }
+  .project-div .mini-box .mini-item {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@media (min-width: 758px) and (max-width: 1023px) {
+  .project-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .project-div section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: none;
+  }
+  .project-div p {
+    font-size: 1em;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+  .project-div #cuting-position {
+    border: none;
+  }
+  .project-div #cuting-text {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1em;
+  }
+  .project-div #pdf-modal {
+    -webkit-transform: translate(-50px, -200px);
+            transform: translate(-50px, -200px);
+    width: 600px;
+    height: 700px;
+  }
+  .project-div #pdf-modal embed {
+    width: 600px;
+    height: 700px;
+  }
+  .project-div .mini-box div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 30px;
+  }
+  .project-div .mini-box .mini-item {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 /*# sourceMappingURL=project_style.css.map */

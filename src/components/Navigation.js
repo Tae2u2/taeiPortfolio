@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { BsArrowBarLeft, BsArrowBarRight } from "react-icons/bs";
 
 const Navigation = ({ changeNav, setChangeNav, position }) => {
-  const [userStayLi, setUserStayLi] = useState(1);
-
   const clickHere = (indexNumber) => {
-    setUserStayLi(indexNumber);
     if (indexNumber === 1) {
       window.scrollTo({
         top: 0,

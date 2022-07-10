@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import piggy from "../images/travel-pig.jpg";
 import cuting from "../images/cuting.png";
 import "../style/project_style.css";
@@ -6,9 +6,12 @@ import "../style/project_style.css";
 import { BiLinkExternal } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 import { SiNotion } from "react-icons/si";
+import { GrDocumentPdf } from "react-icons/gr";
 import MiniProject from "./MiniProject";
+import viewPdf from "../images/4조발표자료PDF.pdf";
 
 const Project = ({ changeNav }) => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div className={changeNav ? "container-div wider-screen" : "container-div"}>
       <h1 className="hashtag-title">#PROJECT</h1>
@@ -70,7 +73,7 @@ const Project = ({ changeNav }) => {
           커뮤니티를 통해 소통할 수 있는 오픈마켓 웹 서비스
           <br />
           <br />
-          5인 팀프로젝트(팀장, FE-70% / BE-30%)
+          5인 팀프로젝트(웹 퍼블리싱, 커뮤니티, Q&A게시판 구현)
           <br />
           2021.07 ~ 09 (3개월)
           <br />
@@ -90,14 +93,26 @@ const Project = ({ changeNav }) => {
               >
                 <BsGithub />
               </button>
-              <button className="link-btn">
-                <SiNotion />
-              </button>
-              <button className="link-btn">
-                <BiLinkExternal />
+              <button className="link-btn"></button>
+              <button
+                className="link-btn"
+                onClick={() => setOpenModal(!openModal)}
+              >
+                <GrDocumentPdf />
               </button>
             </div>
           </div>
+          {openModal && (
+            <div id="pdf-modal">
+              <button onClick={() => setOpenModal(!openModal)}>닫기</button>
+              <embed
+                src={viewPdf}
+                type="application/pdf"
+                width="700px"
+                height="700px"
+              />
+            </div>
+          )}
         </section>
       </div>
     </div>

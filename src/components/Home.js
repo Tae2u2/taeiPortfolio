@@ -1,5 +1,6 @@
 import React from "react";
 import taei from "../images/taei.jpg";
+import "../style/home_style.css";
 
 const Home = ({ changeNav }) => {
   return (
