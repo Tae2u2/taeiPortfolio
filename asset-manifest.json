@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/taeiPortfolio/static/css/main.72c769f0.css",
+    "main.css": "/taeiPortfolio/static/css/main.4574432c.css",
     "main.js": "/taeiPortfolio/static/js/main.0c1d8ad6.js",
     "static/media/4조발표자료PDF.pdf": "/taeiPortfolio/static/media/4조발표자료PDF.04ffdb37043d5699cfee.pdf",
     "static/media/react-project1.png": "/taeiPortfolio/static/media/react-project1.02acabc505519488b88a.png",
@@ -11,11 +11,11 @@
     "static/media/cuting.png": "/taeiPortfolio/static/media/cuting.f865a8d7bdebbcf84ce3.png",
     "static/media/travel-pig.jpg": "/taeiPortfolio/static/media/travel-pig.1bcce7c3fcbfac3b3911.jpg",
     "index.html": "/taeiPortfolio/index.html",
-    "main.72c769f0.css.map": "/taeiPortfolio/static/css/main.72c769f0.css.map",
+    "main.4574432c.css.map": "/taeiPortfolio/static/css/main.4574432c.css.map",
     "main.0c1d8ad6.js.map": "/taeiPortfolio/static/js/main.0c1d8ad6.js.map"
   },
   "entrypoints": [
-    "static/css/main.72c769f0.css",
+    "static/css/main.4574432c.css",
     "static/js/main.0c1d8ad6.js"
   ]
 }
