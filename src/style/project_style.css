@@ -217,8 +217,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transform: translate(200px, 600px);
-          transform: translate(200px, 600px);
+  -webkit-transform: translate(-800px, -300px);
+          transform: translate(-800px, -300px);
   width: 800px;
   height: 800px;
   background-color: #F9fbe7;

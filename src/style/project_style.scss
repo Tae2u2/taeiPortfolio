@@ -164,7 +164,7 @@ $main-color: #F9fbe7;
         position: absolute;
         @include for-center-line();
         flex-direction: column;
-        transform: translate(200px , 600px);
+        transform: translate(-800px , -300px);
         width: 800px;
         height: 800px;
         background-color: $main-color;
