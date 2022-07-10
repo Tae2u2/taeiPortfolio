@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/taeiPortfolio/static/css/main.5f98a7fe.css",
-    "main.js": "/taeiPortfolio/static/js/main.a8754ca8.js",
+    "main.css": "/taeiPortfolio/static/css/main.72c769f0.css",
+    "main.js": "/taeiPortfolio/static/js/main.0c1d8ad6.js",
+    "static/media/4조발표자료PDF.pdf": "/taeiPortfolio/static/media/4조발표자료PDF.04ffdb37043d5699cfee.pdf",
     "static/media/react-project1.png": "/taeiPortfolio/static/media/react-project1.02acabc505519488b88a.png",
     "static/media/JS-project1.png": "/taeiPortfolio/static/media/JS-project1.f01204ade7f8e53201b8.png",
     "static/media/JS-project2.png": "/taeiPortfolio/static/media/JS-project2.d9e9875a7225f0c41af2.png",
@@ -10,11 +11,11 @@
     "static/media/cuting.png": "/taeiPortfolio/static/media/cuting.f865a8d7bdebbcf84ce3.png",
     "static/media/travel-pig.jpg": "/taeiPortfolio/static/media/travel-pig.1bcce7c3fcbfac3b3911.jpg",
     "index.html": "/taeiPortfolio/index.html",
-    "main.5f98a7fe.css.map": "/taeiPortfolio/static/css/main.5f98a7fe.css.map",
-    "main.a8754ca8.js.map": "/taeiPortfolio/static/js/main.a8754ca8.js.map"
+    "main.72c769f0.css.map": "/taeiPortfolio/static/css/main.72c769f0.css.map",
+    "main.0c1d8ad6.js.map": "/taeiPortfolio/static/js/main.0c1d8ad6.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f98a7fe.css",
-    "static/js/main.a8754ca8.js"
+    "static/css/main.72c769f0.css",
+    "static/js/main.0c1d8ad6.js"
   ]
 }
